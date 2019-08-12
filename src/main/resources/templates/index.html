@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<head>
+    <title>Test Task</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/weather.js"></script>
+</head>
+
+<body>
+<select id="city" title="Город"></select>
+<select id="weatherService" title="Погодный сервис"></select>
+<table style="width: 300px">
+    <tr>
+        <td>Температура, °C</td>
+        <td><span id="temp"></span></td>
+    </tr>
+    <tr>
+        <td>Скорость ветра, м/с</td>
+        <td><span id="wind"></span></td>
+    </tr>
+    <tr>
+        <td>Влажность, %</td>
+        <td><span id="humidity"></span></td>
+    </tr>
+</table>
+<div id="error" style="display: none; color: red">Сервис недоступен</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+weather:
+  expiredSec: 300
+  tokens:
+    openweather: 0fc46134c40b21d667cddc351f5884e4
+    yandex: 0dee2b29-d435-4e34-97cd-ce88796d78eb
+
+  cities:
+    mosqow:
+    - Москва
+    - 55.833333
+    - 37.616667
+    yekaterinburg:
+    - Екатеринбург
+    - 56.788751
+    - 60.601570
+    krasnodar:
+    - Краснодар
+    - 45.061655
+    - 38.950918
