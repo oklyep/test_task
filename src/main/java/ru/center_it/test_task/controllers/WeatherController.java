@@ -23,8 +23,7 @@ public class WeatherController {
     @Autowired
     public WeatherController(List<WeatherService> weatherServices,
                              CitiesConfig citiesConfig,
-                             WeatherCache weatherCache)
-    {
+                             WeatherCache weatherCache) {
         weatherServices.forEach(weatherService -> this.weatherServices.put(weatherService.getId(), weatherService.getName()));
         citiesConfig.getCities().forEach((name, description) -> this.cities.put(name, description[0]));
         this.weatherCache = weatherCache;
@@ -43,6 +42,6 @@ public class WeatherController {
     @GetMapping("/weather")
     public WeatherData getWeather(@RequestParam String city,
                                   @RequestParam String weatherService) throws IOException {
-        return   weatherCache.getWeatherData(city, weatherService);
+        return weatherCache.getWeatherData(city, weatherService);
     }
 }

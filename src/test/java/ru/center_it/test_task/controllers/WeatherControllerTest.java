@@ -14,7 +14,6 @@ import ru.center_it.test_task.weather.WeatherService;
 import java.util.List;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
@@ -37,7 +36,7 @@ public class WeatherControllerTest {
 
         for (WeatherService weatherService : weatherServiceList)
             mockMvc
-                    .perform(get(String.format("/weather?city=%s&weatherservice=%s", city, weatherService.getId())))
+                    .perform(get(String.format("/weather?city=%s&weatherService=%s", city, weatherService.getId())))
                     .andExpect(status().isOk());
     }
 }
