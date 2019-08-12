@@ -2,26 +2,48 @@
 <head>
     <title>Test Task</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/weather.js"></script>
 </head>
 
 <body>
-<select id="city" title="Город"></select>
-<select id="weatherService" title="Погодный сервис"></select>
-<table style="width: 300px">
-    <tr>
-        <td>Температура, °C</td>
-        <td><span id="temp"></span></td>
-    </tr>
-    <tr>
-        <td>Скорость ветра, м/с</td>
-        <td><span id="wind"></span></td>
-    </tr>
-    <tr>
-        <td>Влажность, %</td>
-        <td><span id="humidity"></span></td>
-    </tr>
-</table>
+<div class="container" style="max-width: 500px">
+    <div class="form-group">
+        <div class="row">
+            <div class="col">
+                <select id="city" title="Город" class="form-control form-control-sm"></select>
+            </div>
+            <div class="col">
+                <select id="weatherService" title="Погодный сервис" class="form-control form-control-sm"></select>
+            </div>
+        </div>
+    </div>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <td>Температура, °C</td>
+                <td><span id="temp"></span></td>
+            </tr>
+            <tr>
+                <td>Скорость ветра, м/с</td>
+                <td><span id="wind"></span></td>
+            </tr>
+            <tr>
+                <td>Влажность, %</td>
+                <td><span id="humidity"></span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 <div id="error" style="display: none; color: red">Сервис недоступен</div>
 </body>
